@@ -1,0 +1,6 @@
+test -e ssshtest || wget -q https://raw.githubusercontent.com/ryanlayer/ssshtest/master/ssshtest
+. ssshtest
+
+run test_for_success \
+    run plotter plotter.py -i ../../iris.data
+assert_exit_code 0
